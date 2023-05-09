@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/GymAppBuild/static/css/main.0597ef04.css",
-    "main.js": "/GymAppBuild/static/js/main.247b9501.js",
-    "static/js/787.f5903c7c.chunk.js": "/GymAppBuild/static/js/787.f5903c7c.chunk.js",
-    "index.html": "/GymAppBuild/index.html",
-    "main.0597ef04.css.map": "/GymAppBuild/static/css/main.0597ef04.css.map",
-    "main.247b9501.js.map": "/GymAppBuild/static/js/main.247b9501.js.map",
-    "787.f5903c7c.chunk.js.map": "/GymAppBuild/static/js/787.f5903c7c.chunk.js.map"
+    "main.css": "/GymAppV2/static/css/main.0597ef04.css",
+    "main.js": "/GymAppV2/static/js/main.4bd929b9.js",
+    "static/js/787.a9c6804b.chunk.js": "/GymAppV2/static/js/787.a9c6804b.chunk.js",
+    "index.html": "/GymAppV2/index.html",
+    "main.0597ef04.css.map": "/GymAppV2/static/css/main.0597ef04.css.map",
+    "main.4bd929b9.js.map": "/GymAppV2/static/js/main.4bd929b9.js.map",
+    "787.a9c6804b.chunk.js.map": "/GymAppV2/static/js/787.a9c6804b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0597ef04.css",
-    "static/js/main.247b9501.js"
+    "static/js/main.4bd929b9.js"
   ]
 }

@@ -5,8 +5,7 @@ import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
-export default function AddCustomer(props,params) {
-  
+export default function AddCustomer(props, params) {
   const [open, setOpen] = React.useState(false);
   const [customer, setCustomer] = React.useState({
     firstname: "",
@@ -18,8 +17,6 @@ export default function AddCustomer(props,params) {
     phone: "",
   });
 
-
-
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -30,13 +27,9 @@ export default function AddCustomer(props,params) {
     props.addCustomer(customer);
     setOpen(false);
   };
-  
-
-
 
   return (
     <div>
-      
       <Button variant="contained" onClick={handleClickOpen}>
         New customer
       </Button>

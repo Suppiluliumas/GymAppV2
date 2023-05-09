@@ -1,5 +1,4 @@
 import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import React from "react";
 import { trainings_url } from "../constants";
@@ -24,7 +23,11 @@ export function Calendar() {
   };
 
   const events = trainings.map((training) => ({
-    title: `${training.activity} - ${training.customer.firstname} ${training.customer.lastname}`,
+    title: `${training.activity} - ${
+      training.customer
+        ? training.customer.firstname + " " + training.customer.lastname
+        : ""
+    }`,
     start: dayjs(training.date).toDate(),
     end: dayjs(training.date).add(training.duration, "minute").toDate(),
     timeFormat: "H(:mm)",
@@ -36,13 +39,12 @@ export function Calendar() {
         plugins={[timeGridPlugin]}
         initialView="timeGridWeek"
         events={events}
-        eventTimeFormat = {{
+        eventTimeFormat={{
           hour: "numeric",
           minute: "2-digit",
           meridiem: false,
         }}
         start={events.start}
-        
         title={events.title}
       />
     </div>

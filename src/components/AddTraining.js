@@ -3,7 +3,6 @@ import { new_training_url, trainings_url } from "../constants";
 import {
   LocalizationProvider,
   StaticDateTimePicker,
-  
 } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import Button from "@mui/material/Button";
@@ -13,7 +12,6 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import dayjs from "dayjs";
-
 
 export default function AddTraining(props) {
   const today = dayjs();
@@ -59,8 +57,6 @@ export default function AddTraining(props) {
       .catch((err) => console.error(err));
   };
 
-  
-
   return (
     <div>
       <Button variant="outlined" onClick={handleClickOpen}>
@@ -70,7 +66,7 @@ export default function AddTraining(props) {
         <DialogTitle>Add training for customer</DialogTitle>
         <DialogContent>
           <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="fi">
-            <StaticDateTimePicker 
+            <StaticDateTimePicker
               orientation="landscape"
               defaultValue={today}
               minDate={today}

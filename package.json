@@ -1,7 +1,7 @@
 {
-  "name": "gymappbuild",
-"version": "0.1.0",
-"homepage": "https://Suppiluliumas.github.io/GymAppBuild",
+  "name": "gymappv2",
+  "version": "0.1.0",
+  "homepage": "https://suppiluliumas.github.io/GymAppV2",
   "dependencies": {
     "@emotion/react": "^11.10.8",
     "@emotion/styled": "^11.10.8",
@@ -18,11 +18,13 @@
     "ag-grid-community": "^29.2.0",
     "ag-grid-react": "^29.2.0",
     "dayjs": "^1.11.7",
+    "lodash": "^4.17.21",
     "rc-datetime-picker-dayjs": "^1.0.1",
     "react": "^18.2.0",
     "react-datepicker": "^4.11.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "recharts": "^2.6.0",
     "styled-components": "^5.3.9",
     "web-vitals": "^2.1.4"
   },
@@ -33,7 +35,6 @@
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
-
   },
   "eslintConfig": {
     "extends": [

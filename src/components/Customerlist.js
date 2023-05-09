@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { AgGridReact } from "ag-grid-react";
-import { Button} from "@mui/material";
+import { Button } from "@mui/material";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-material.css";
-import { customers_url, new_training_url } from "../constants";
+import { customers_url } from "../constants";
 import AddCustomer from "./AddCustomer";
 import { Snackbar } from "@mui/material";
 import EditCustomer from "./EditCustomer";

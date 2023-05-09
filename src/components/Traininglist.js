@@ -4,14 +4,13 @@ import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-material.css";
 import dayjs from "dayjs";
 
-import {trainings_url } from "../constants";
+import { trainings_url } from "../constants";
 
 import { Button, Snackbar } from "@mui/material";
 
-
 function Traininglist() {
   const [msg, setMsg] = useState("");
-  const[open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const [trainings, setTrainings] = useState([]);
   const [columnDefs] = useState([
     { field: "id", sortable: true, filter: true, hide: true },
@@ -41,7 +40,7 @@ function Traininglist() {
         <Button
           size="large"
           color="error"
-          onClick={() => deleteTraining(params)} 
+          onClick={() => deleteTraining(params)}
         >
           Delete
         </Button>
@@ -53,7 +52,6 @@ function Traininglist() {
   useEffect(() => {
     getTrainings();
     formatDate();
-    
   }, []);
 
   const getTrainings = () => {
@@ -61,11 +59,13 @@ function Traininglist() {
       .then((response) => response.json())
       .then((data) => setTrainings(data))
       .catch((err) => console.error(err));
-      
   };
   const deleteTraining = (params) => {
     if (window.confirm("Are you sure?")) {
-      fetch("https://traineeapp.azurewebsites.net/api/trainings/"+params.data.id, { method: "DELETE" })
+      fetch(
+        "https://traineeapp.azurewebsites.net/api/trainings/" + params.data.id,
+        { method: "DELETE" }
+      )
         .then((response) => {
           if (response.ok) {
             setMsg("Training was deleted successfully.");
@@ -100,7 +100,6 @@ function Traininglist() {
         onClose={() => setOpen(false)}
         message={msg}
       />
-      
     </>
   );
 }
